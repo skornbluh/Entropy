@@ -1,12 +1,10 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.util.Scanner;
 
 public class Entropy {
 
 	private static String data;
 
 	private static double entropy = 0;
-
 
 	public static void countOccurrences() {
 		char[] uniqueCharacters = new char[data.length()];
@@ -49,8 +47,8 @@ public class Entropy {
 	}
 
 	public static void main(String[] args) {
-		data = args[0];
-
+		Scanner scan = new Scanner(System.in);
+		data = scan.nextLine();
 		countOccurrences();
 
 		System.out.println(data);
